@@ -1,0 +1,10 @@
+[LASTFM_API]
+url = http://ws.audioscrobbler.com/2.0
+access_token = 
+user = 
+
+[INFLUX]
+bucket = 
+org = 
+token = 
+url = 
