@@ -1,7 +1,7 @@
 name: publish
 on: [push]
 jobs:
-  publish-hello-docker-image:
+  publish-connector-lastfm-influx-image:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,8 +11,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the hello-docker Docker image
+      - name: Build the connector-lastfm-influx Docker image
         run: |
-          docker build . --tag ghcr.io/deselikem/hello-docker-gcr-demo:latest
-          docker run ghcr.io/deselikem/hello-docker-gcr-demo:latest
-          docker push ghcr.io/deselikem/hello-docker-gcr-demo:latest
+          docker build . --tag ghcr.io/johntdyer/connector-lastfm-influx:latest
+          docker run ghcr.io/johntdyer/connector-lastfm-influx:latest
+          docker push ghcr.io/johntdyer/connector-lastfm-influx:latest
